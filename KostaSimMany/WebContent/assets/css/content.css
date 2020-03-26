@@ -1,0 +1,351 @@
+@charset "utf-8";
+/* content.css : Normal function Component / design / exception / etc */
+
+/* *********************************************************************************
+ *	입력, 상세보기 정보 나열 방식 - common
+ * *********************************************************************************/
+.infoList { width:100%;}
+.infoList * { font-size:13px;}
+.infoList > *[class*="cnt"] {float:left; padding-bottom:7px;}
+.infoList > *[class*="cnt"] > * { vertical-align:middle; }
+.infoList .cnt1 { width:100%; }
+.infoList .cnt2 { width:50%;}
+.infoList .cnt2_long { width:66.666666%;}
+.infoList .cnt3 { width:33.33333%;}
+.infoList .cnt3_long { width:66.666666%;}
+.infoList .cnt4 { width:25%;}
+.infoList .cnt4_long { width:75%;}
+.infoList .clear { clear:left;}
+.infoList label, .infoList .label { display:inline-block; width:90px; font-weight:600; color:#426a9c; }
+.infoList label.sublabel, .infoList .sublabel { display:inline-block; width:auto; margin-left:20px; margin-right:10px; font-size:13px; font-weight:400; color:#444 !important; }
+.infoList input + label.sublabel, .infoList input +  .sublabel { margin-left:10px; margin-right:20px; }
+.infoList label.mid, .infoList .label.mid { width:120px; }
+.infoList label.long, .infoList .label.long { width:90px; }
+.infoList label.long2, .infoList .label.long2 { width:200px; }
+.infoList .textlabel { padding-left:7px; margin-right:20px; width:auto; color:#666; font-weight:400;}
+.infoList input[type="text"],
+.infoList input[type="tel"],
+.infoList input[type="date"],
+.infoList input[type="email"],
+.infoList select { width:65%; background-color:#fff; border-color:#cbd3dc}
+.infoList .cnt3 input[type="text"],
+.infoList .cnt3 input[type="tel"],
+.infoList .cnt3 input[type="date"],
+.infoList .cnt3 input[type="email"],
+.infoList .cnt3 select { width:45%}
+.infoList .cnt3_long input[type="text"],
+.infoList .cnt3_long input[type="tel"],
+.infoList .cnt3_long input[type="date"],
+.infoList .cnt3_long input[type="email"],
+.infoList .cnt3_long select { width:72%}
+.infoList .cnt1 input[type="text"],
+.infoList .cnt1 input[type="tel"],
+.infoList .cnt1 input[type="date"],
+.infoList .cnt1 input[type="email"],
+.infoList .cnt1 select { width:82%}
+.infoList input[type="text"].input_date { width:128px; }
+.infoList .btn { vertical-align:middle;}
+.infoList input[type="text"].hlong,
+.infoList input[type="password"].hlong,
+.infoList input[type="tel"].hlong,
+.infoList input[type="date"].hlong,
+.infoList input[type="email"].hlong, .infoList select.hlong {width: 70%;}
+.infoList input[type="text"].mid,
+.infoList input[type="tel"].mid,
+.infoList input[type="date"].mid,
+.infoList input[type="email"].mid,
+.infoList select.mid { width:45%;}
+.infoList input[type="text"].mini,
+.infoList input[type="password"].mini,
+.infoList input[type="tel"].mini,
+.infoList input[type="date"].mini,
+.infoList input[type="email"].mini,
+.infoList select.mini { width:20%; }
+.infoList input[type="text"].mini_px,
+.infoList input[type="password"].mini_px,
+.infoList input[type="tel"].mini_px,
+.infoList input[type="date"].mini_px,
+.infoList input[type="email"].mini_px,
+.infoList select.mini_px { width:80px; }
+.infoList textarea { box-sizing:border-box; display:block; width:100%;height:80px; margin-top:7px; padding:10px; border:1px solid #e5e5e5; font-size:13px; line-height:20px; color:#666; background-color:#f9f9f9; }
+.infoList textarea.textLeft { float:left; width:82%; margin-left:3px; margin-top:0; }
+.infoList textarea.textLeft.w100 { width:98%; }
+.infoList textarea.textLeft.h250 { height:250px;}
+.infoList .long2 + textarea.textLeft { width:75%; }
+.infoList input[type="text"][readonly="readonly"] { border-color:#90acce; background-color:#f5faff; }
+.infoList::after { content:""; display:block; clear:both;}
+.infoList .inner { display:table; width:100%; }
+.infoList .inner > * { display:table-cell; vertical-align:top;}
+.infoList .inner > *:first-child + * { padding-left:5px;}
+.infoList .inner > *:first-child + * > * { margin-bottom:5px; }
+.infoList .inner > *:first-child + * > *:last-child { margin-bottom:0; }
+.infoList .inner input {margin-bottom:7px;}
+.infoList .inner textarea {margin-left: 5px;padding-left: 10px !important;}
+.infoList .inner .noticeText { padding-bottom:7px; }
+.infoList .inner .btn {	vertical-align: top;}
+.infoList .w80 {width: 80%;}
+.infoList .w70 {width: 70%;}
+.infoList .inner .w30 { float:left; width:30%; padding-left:0; margin-right:0;}
+.infoList .inner .w70 { float:left; width:68% !important; padding-left:0; margin-right:0;}
+.infoList .infoList.sm {padding-bottom: 7px;}
+.infoList .infoList.sm>*[class^="cnt"] {padding-bottom: 0px;}
+.infoList .infoList.sm>*[class^="cnt"] * {display: inline-block;vertical-align: middle;}
+.infoList .infoList.sm input[type="checkbox"] {margin-bottom: 0;}
+
+/* *********************************************************************************
+ *	입력, 상세보기 정보 나열 방식 - data table방식
+ * *********************************************************************************/
+.infoList.dt {width: 100%;	border-collapse: collapse;	border-top: 1px solid #aecde3;	line-height: 20px}
+.infoList.dt th, .infoList.dt td {	padding: 5px 3px;	/*text-align: center;*/border-bottom: 1px solid #aecde3;	border-left: 1px dashed #aecde3;font-size: 12px; }
+.infoList.dt th {color: #424b54;	background: #eef7ff;}
+.infoList.dt td {background-color: #fff;}
+.infoList.dt tr>*:first-child {border-left: 0 none}
+.infoList.dt tbody th {background-color: #fff;}
+.infoList.dt .txtAfter {font-weight: 600;color: #2051b3 !important;background-color: #e9effb !important;}
+.infoList.dt .txtAfter input[type="text"], .infoList.dt .txtAfter select	{border-color: #91a8d6;}
+.infoList.dt input[type="text"], .infoList.dt select {	width: 95%;height: 24px;font-size: 12px;}
+.infoList.dt input[type="text"].mini, .infoList.dt select.mini {	width: 65%;}
+
+/* *********************************************************************************
+ *	view
+ * *********************************************************************************/
+.viewArea { box-sizing:border-box; padding:15px 15px 10px 15px; margin-bottom:15px; width:100%; height:auto; overflow:hidden; background-color:#f4f4f4; border-bottom:1px solid #ddd}
+.viewArea .infoList textarea {	background-color: #fff;}
+.viewArea.blue { /*background-color:#e7eff7;*/ background-color:#fbfdff; border-bottom:1px solid #c6d1dc}
+.viewArea.blue .infoList label,
+.viewArea.blue .infoList .label { color:#426a9c; }
+.viewArea.end { border:1px dashed #b8c1c9; border-top:3px solid #56606a;background-color:#fff}
+.viewArea.end .infoList label,
+.viewArea.end .infoList .label { color:#333; }
+
+/* *********************************************************************************
+ *	form : 단독적으로 처리된 경우 (팝업내 form)
+ * *********************************************************************************/
+.formBox { box-sizing:border-box; display:block; width:100%; margin-top:10px; padding-top:10px; height:auto; border-top:1px solid #e5e5e5;}
+.formBox label { display:block; margin:8px 0; font-weight:600; color:#426a9c; }
+.formBox .formText { box-sizing:border-box; display:block; width:100%;height:150px;padding:10px; font-size:13px; line-height:20px; color:#666; background-color:#f9f9f9; border:1px solid #e5e5e5; }
+
+/* *********************************************************************************
+ *	신청서 추가,삭제에 대한 1개의 영역
+ * *********************************************************************************/
+.oneArea { width:100%; box-sizing:border-box; border:1px solid #a4ceeb; margin-bottom:15px;}
+.oneArea .viewArea { border-bottom:0 none; margin-bottom:0; }
+.oneAreaTr { /* table 형태로 추가삭제시 */}
+.oneAreaTr  input[type="text"],
+.oneAreaTr select {border-color:#91a8d6;}
+
+/* *********************************************************************************
+ *	텍스트 신고폼
+ * *********************************************************************************/
+.txtForm { display:table; border-collapse: separate; border-spacing:5px; }
+.txtForm > p { display:table-cell; vertical-align:top; }
+.txtForm input[type="checkbox"],
+.txtForm input[type="radio"] { display:inline-block; margin:0 3px; }
+
+/* *********************************************************************************
+ *	각종 팝업 검색 결과 영역
+ * *********************************************************************************/
+.resultBox { clear:both; box-sizing:border-box;  padding:5px; width:100%; height:400px; background-color:#f9f9f9; border:1px solid #e5e5e5;  }
+
+/* *********************************************************************************
+ * 접수증 화면
+ * *********************************************************************************/
+.printReceipt {}
+.printReceipt .title { display:block;  width:100%; margin:10px 0 30px 0; text-align:center; }
+.printReceipt .title span { display:inline-block; padding-right:20px; padding-left:20px; padding-bottom:10px;  font-size:24px; font-weight:700; letter-spacing:0.25em; color:#000; border-bottom:2px solid #0273e1;}
+.printReceipt .subtitle { display:block; width:90%; margin:0 auto; font-weight:600; font-size:16px; text-align:center }
+.printReceipt .subtitle strong { color:#000;}
+.printReceipt table { margin-top:20px;width:100%;border-collapse:collapse;border-top:2px solid #0067cc;line-height:20px}
+.printReceipt table th,
+.printReceipt table td {padding:10px;text-align:left; font-size:13px; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.printReceipt table th {background:#eef7ff;color:#424b54;font-weight:600;}
+.printReceipt table tr > *:first-child { border-left:1px solid #ddd; }
+.printReceipt table .list > li { margin-left:0; }
+.printReceipt .useInfo { width:90%; margin:20px auto 0 auto; font-size:16px; text-align:right; color:#0273e1; }
+.printReceipt .useInfo strong { color:#000}
+
+/* *********************************************************************************
+ * 상황조회 박스 처리
+ * *********************************************************************************/
+.statusLineArea { box-sizing:border-box; position:relative; width:100%; height:320px; margin-bottom:20px; padding:15px; border:1px solid #cbe2f7; background-color:rgba(249,249,249,0.7); overflow:hidden}
+.statusLineArea .arrow { position:absolute; display:block; background-position:0 0; background-repeat:no-repeat;}
+.statusLineArea .arrow.right_long { width:91px; height:25px; background-image:url(../images/contents/status_arrow_right_long.gif);}
+.statusLineArea .arrow.right { width:38px; height:25px; background-image:url(../images/contents/status_arrow_right.gif);}
+.statusLineArea .arrow.down { width:25px; height:38px; background-image:url(../images/contents/status_arrow_down.gif);}
+.statusLineArea .arrow.dnright { width:47px; height:58px; left:50px; top:60px; background-image:url(../images/contents/status_arrow_dnright.gif);}
+.statusLineArea .arrow.dnleft { width:58px; height:47px; left:50px; top:130px; background-image:url(../images/contents/status_arrow_dnleft.gif);}
+.statusLineArea .arrow.right_long.go1to4 { left:140px; top:40px;}
+.statusLineArea .arrow.right_long.go3to4 { left:140px; top:190px;}
+.statusLineArea .arrow.right.go4to5 { left:300px; top:40px;}
+.statusLineArea .arrow.right.go5to6 { left:450px; top:40px;}
+.statusLineArea .arrow.right.go6to7 { left:600px; top:40px;}
+.statusLineArea .arrow.down.go5to8 { left:390px; top:60px;}
+.statusLineArea .arrow.down.go7to8 { left:690px; top:60px;}
+.statusLineArea .arrow.down.go8to9 { left:390px; top:135px;}
+.statusLineArea .arrow.down.go8to10 { left:540px; top:135px;}
+.statusLineArea .arrow.right.go9to10 { left:450px; top:190px;}
+.statusLineArea .arrow.right.go10to11 { left:600px; top:190px;}
+.statusLineArea .arrow.down.go11to12 { left:690px; top:210px;}
+.statusLineArea .box { position:absolute; box-sizing:border-box; display:block; z-index:2; width:120px; height:40px; padding:10px; border-radius:3px; border:1px dashed #7195b6; background-color:#fff; text-align:center; color:#666;}
+.statusLineArea .box.on { border:2px solid #2b6ca7; color:#093591; font-weight:600; }
+.statusLineArea .box.num1 { left:20px; top:30px;}
+.statusLineArea .box.num2 { left:100px; top:90px; height:60px; padding-top:18px;}
+.statusLineArea .box.num3 { left:20px; top:180px;}
+.statusLineArea .box.num4 { left:240px; top:30px; width:70px; height:190px; padding-top:70px;}
+.statusLineArea .box.num5 { left:340px; top:30px;}
+.statusLineArea .box.num6 { left:490px; top:30px;}
+.statusLineArea .box.num7 { left:640px; top:30px;}
+.statusLineArea .box.num8 { left:340px; top:100px; width:420px;}
+.statusLineArea .box.num9 { left:340px; top:180px;}
+.statusLineArea .box.num10 { left:490px; top:180px;}
+.statusLineArea .box.num11 { left:640px; top:180px;}
+.statusLineArea .box.num12 { left:640px; top:250px;}
+
+/* *********************************************************************************
+ *	파일첨부 목록
+ * *********************************************************************************/
+.fileListArea {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.fileListArea>.fList {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 80%;
+	height: 117px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border: 1px solid #dcdcdc;
+	background-color: #f9f9f9;
+}
+
+.fileListArea>.fList>li {
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.fileListArea>.fList>li>a {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+.fileListArea>.fList>li>a:hover, .fileListArea>.fList>li>a:focus {
+	background-color: #fff;
+}
+
+.fileListArea>.fList>li:last-child {
+	border-bottom: 0 none;
+}
+
+.fileListArea>.btn {
+	float: left;
+	margin-left: 5px;
+}
+
+/* *********************************************************************************
+ *	나의민원형황
+ * *********************************************************************************/
+.myProcessing {
+	clear: both;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.myProcessing ol {
+	box-sizing: border-box;
+	height: 120px;
+	padding-top: 0px;
+	padding-left: 50px;
+}
+
+.myProcessing ol>li {
+	float: left;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 120px;
+	height: 120px;
+	margin: 0 18px;
+	padding-top: 80px;
+	color: #666;
+	font-size: 13px;
+	text-align: center;
+	border-radius: 60px;
+	border: 1px dashed #dcdcdc;
+	background-color: #f6f6f6;
+	background-position: center 15px;
+	background-repeat: no-repeat
+}
+
+.myProcessing ol>li::after {
+	display: block;
+	position: absolute;
+	content: " → ";
+	right: -38px;
+	top: 50%;
+	margin-top: -15px;
+	width: 36px;
+	font-family: Dotum;
+	font-size: 26px;
+	font-weight: 600;
+	color: #5e80cd;
+	text-align: center;
+}
+
+.myProcessing ol>li:last-child::after {
+	display: none;
+}
+
+.myProcessing ol>li.pro1 {
+	background-image: url(../images/contents/my_proc_icon_put.png)
+} /* 신청완료 */
+.myProcessing ol>li.pro2 {
+	background-image: url(../images/contents/my_proc_icon_take.png)
+} /* 접수완료 */
+.myProcessing ol>li.pro3 {
+	background-image: url(../images/contents/my_proc_icon_dispose.png)
+} /* 처리중 */
+.myProcessing ol>li.pro4 {
+	background-image: url(../images/contents/my_proc_icon_redeem.png)
+} /* 보완 */
+.myProcessing ol>li.pro5 {
+	background-image: url(../images/contents/my_proc_icon_done.png)
+} /* 처리완료 */
+/* .myProcessing ol>li.pro2::after {
+	content: "↗ ↘";
+	margin-top: -30px;
+} */
+
+/* .myProcessing ol>li.pro3 {
+	top: -70px
+} */
+
+/* .myProcessing ol>li.pro3::after {
+	content: "↘";
+} */
+
+/* .myProcessing ol>li.pro4 {
+	left: -150px;
+	top: 80px
+} */
+
+/* .myProcessing ol>li.pro4::after {
+	content: "↗";
+} */
+
+/* .myProcessing ol>li.pro5 {
+	left: -150px;
+} */
+
+.myProcessing ol>li.on {
+	font-size: 14px;
+	font-weight: 600;
+	color: #5e80cd;
+	background-color: #fff;
+	border: 3px solid #5e80cd;
+}

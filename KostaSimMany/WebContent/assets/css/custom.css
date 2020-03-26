@@ -1,0 +1,10 @@
+/* autocomplete style */
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto;}
+.autocomplete-suggestion { padding: 3px 14px; font-size: 14px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { line-height: 2em; font-style: italic; font-size: 5px; padding: 3px 14px; font-size: 14px; white-space: nowrap; overflow: hidden; }
+.ac_user_name {font-size: 15px; font-weight: bold;}
+.ac_dept_name {line-height: 2em; font-style: italic; font-size: 11px;}
+.autocomplete-selected { background: #d9d9d9; }
+.autocomplete-suggestions strong { font-weight: bold; color: #3399FF; }
+.autocomplete-group {padding: 5px; font-size: 12px; font-weight:bold; background-color: #2979c3; color:#f9f9f9; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
